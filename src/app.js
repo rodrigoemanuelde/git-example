@@ -2,8 +2,8 @@ const express = require("express");
 const app = express();
 const PORT = 3000;
 
-app.use("/", () => {
-  console.log("Ruta principal de la app");
+app.get("/", function (req, res) {
+  res.send("Hola Mundo!");
 });
 
 app.listen(PORT, () => {
